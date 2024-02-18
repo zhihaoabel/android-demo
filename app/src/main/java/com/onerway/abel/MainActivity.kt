@@ -87,6 +87,16 @@ fun GreetingImage(message: String, from: String, modifier: Modifier) {
     }
 }
 
+@Composable
+fun Article(title: String, body: Array<String>, modifier: Modifier) {
+    Column(modifier = modifier) {
+        Text(text = title)
+        for (paragraph in body) {
+            Text(text = paragraph)
+        }
+    }
+}
+
 @Preview(showBackground = true)
 @Composable
 fun BirthdayCardPreview(): Unit {
